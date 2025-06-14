@@ -2,7 +2,7 @@
 const ANIMATIONS_MAN = [
   [
     'SittingIdle',
-    'https://cdn.glitch.global/3e6e78f9-b796-4cf3-8451-2fcba6103a3c/SittingIdle_man.fbx?v=1711641528318', // Overdrive 40 Character Arm-Space 50
+    '/SittingIdle_man.fbx', // Overdrive 40 Character Arm-Space 50
     {
       ignoreBones: [
         'Spine1',
@@ -23,7 +23,7 @@ const ANIMATIONS_MAN = [
 
   [
     'Idle',
-    'https://cdn.glitch.global/d8f22817-cf4b-44e4-9cc1-0633ac6cda8d/BreathingIdle.fbx?v=1701432248342',
+    '/BreathingIdle.fbx',
     {
       ignoreBones: [
         'Spine1',
@@ -44,7 +44,7 @@ const ANIMATIONS_MAN = [
 
   [
     'Walking',
-    'https://cdn.glitch.global/d8f22817-cf4b-44e4-9cc1-0633ac6cda8d/Walking.fbx?v=1701432532423',
+    '/Walking.fbx',
     {
       ignoreBones: ['LeftEye', 'LeftEye_end', 'LeftEye_end_end', 'RightEye', 'RightEye_end', 'RightEye_end_end'],
       positionMultiplier: 0.01,
@@ -55,7 +55,7 @@ const ANIMATIONS_MAN = [
 
   [
     'Dying',
-    'https://cdn.glitch.global/3e6e78f9-b796-4cf3-8451-2fcba6103a3c/Dying.fbx?v=1703867995062',
+    '/Dying.fbx',
     {
       ignoreBones: ['LeftEye', 'LeftEye_end', 'LeftEye_end_end', 'RightEye', 'RightEye_end', 'RightEye_end_end'],
       positionMultiplier: 0.01,
@@ -67,7 +67,7 @@ const ANIMATIONS_MAN = [
 const ANIMATIONS_WOMAN = [
   [
     'SittingIdle',
-    'https://cdn.glitch.global/3e6e78f9-b796-4cf3-8451-2fcba6103a3c/SittingIdle_woman.fbx?v=1711641103935', // Overdrive 40 Character Arm-Space 62
+    '/SittingIdle_woman.fbx', // Overdrive 40 Character Arm-Space 62
     {
       ignoreBones: [
         'Spine1',
@@ -88,7 +88,7 @@ const ANIMATIONS_WOMAN = [
 
   [
     'Idle',
-    'https://cdn.glitch.global/d8f22817-cf4b-44e4-9cc1-0633ac6cda8d/BreathingIdle.fbx?v=1701432248342',
+    '/BreathingIdle.fbx',
     {
       ignoreBones: [
         'Spine1',
@@ -109,7 +109,7 @@ const ANIMATIONS_WOMAN = [
 
   [
     'Walking',
-    'https://cdn.glitch.global/d8f22817-cf4b-44e4-9cc1-0633ac6cda8d/Walking.fbx?v=1701432532423',
+    '/Walking.fbx',
     {
       ignoreBones: ['LeftEye', 'LeftEye_end', 'LeftEye_end_end', 'RightEye', 'RightEye_end', 'RightEye_end_end'],
       positionMultiplier: 0.01,
@@ -120,7 +120,7 @@ const ANIMATIONS_WOMAN = [
 
   [
     'Dying',
-    'https://cdn.glitch.global/3e6e78f9-b796-4cf3-8451-2fcba6103a3c/Dying.fbx?v=1703867995062',
+    '/Dying.fbx',
     {
       ignoreBones: ['LeftEye', 'LeftEye_end', 'LeftEye_end_end', 'RightEye', 'RightEye_end', 'RightEye_end_end'],
       positionMultiplier: 0.01,
@@ -513,9 +513,6 @@ AFRAME.registerComponent('player-info', {
             for (let [animationName, url, options] of animations) {
               const loader = url.indexOf('.glb') > -1 ? this.glbLoader : this.fbxLoader;
               options = options ?? {};
-              if (window.USE_GLITCH === false) {
-                url = new URL(url).pathname.split('/').pop();
-              }
               const asset = await loader.loadAsync(url);
               const clip = asset.animations[0];
               let newClip = clip;

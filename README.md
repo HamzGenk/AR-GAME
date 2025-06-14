@@ -3,8 +3,6 @@
 - [Live demo](https://naf-valid-avatars.glitch.me)
 - [Live demo for doing a vote session](https://naf-valid-avatars.glitch.me/vote.html)
 
-The [GitHub repo](https://github.com/networked-aframe/naf-valid-avatars) is synced with the [code on glitch](https://glitch.com/edit/#!/naf-valid-avatars) if you want to remix there.
-
 This example is based on [naf-nametag-solidjs](https://github.com/networked-aframe/naf-nametag-solidjs) for the SolidJS and Tailwind CSS boilerplate
 and is using the avatars from the [valid-avatars-glb GitHub repository](https://github.com/c-frame/valid-avatars-glb).
 

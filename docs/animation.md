@@ -15,14 +15,12 @@ https://github.com/networked-aframe/naf-valid-avatars/assets/112249/be7cf088-76b
 
 # Using the animation
 
-- Upload on glitch as an asset
-
 Put the animation in the ANIMATIONS array in the `player-info.js` file.
 
 ```js
   [
     'Dying',
-    'https://cdn.glitch.global/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Dying.fbx?v=1701432248342',
+    '/Dying.fbx',
     {
       ignoreBones: ['LeftEye', 'LeftEye_end', 'LeftEye_end_end', 'RightEye', 'RightEye_end', 'RightEye_end_end'],
       positionMultiplier: 0.01,

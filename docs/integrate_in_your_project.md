@@ -1,4 +1,4 @@
-# Integrate the avatars in your glitch project
+# Integrate the avatars in your project
 
 The main parts without the UI are in `player-info.js` and `index.html`.
 You can look at `index.html` to see the exact things to add, but here are the relevant parts concerning the avatars.
