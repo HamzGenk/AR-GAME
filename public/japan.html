@@ -47,6 +47,12 @@
         </template>
         <img id="thumbJapan" crossorigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/japan.png" />
         <img id="thumbForest" crossorigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/forest.png" />
+        <a-asset-item id="genderuwo" src="aset horor/Genderuwo 2.glb"></a-asset-item>
+        <a-asset-item id="gundul" src="aset horor/Gundul Pringis.glb"></a-asset-item>
+        <a-asset-item id="kuntilanak" src="aset horor/Kuntilanak.glb"></a-asset-item>
+        <a-asset-item id="pocong" src="aset horor/Pocong.glb"></a-asset-item>
+        <a-asset-item id="tuyul" src="aset horor/Tuyul 2.glb"></a-asset-item>
+        <a-asset-item id="wewe" src="aset horor/Wewe gombel.glb"></a-asset-item>
       </a-assets>
 
       <a-entity id="scene">
@@ -60,6 +66,14 @@
           image="#thumbForest"
           ><a-box position="0 0 0.5" obb-collider visible="false"></a-box
         ></a-link>
+        <a-entity gltf-model="#genderuwo" position="-12.64192 0.41553 -7" scale="1 1 1" animation-mixer look-at="-2 1.5 3"></a-entity>
+        <a-entity gltf-model="#gundul" position="-8 0 -7" scale="1 1 1" animation-mixer look-at="-2 1.5 3"></a-entity>
+        <a-entity gltf-model="#kuntilanak" position="-4 2 -7" animation-mixer look-at="-2 1.5 3">
+          <a-animation attribute="position" dur="3000" from="-4 2 -7" to="-4 4 -7" repeat="indefinite" direction="alternate"></a-animation>
+        </a-entity>
+        <a-entity gltf-model="#pocong" position="0 0 -7" scale="1 1 1" animation-mixer look-at="-2 1.5 3"></a-entity>
+        <a-entity gltf-model="#tuyul" position="4 0 -7" scale="1 1 1" animation-mixer look-at="-2 1.5 3"></a-entity>
+        <a-entity gltf-model="#wewe" position="8 0.2614 -7" scale="1 1 1" animation-mixer="timeScale: 0.5" look-at="-2 1.5 3"></a-entity>
       </a-entity>
 
       <a-entity
